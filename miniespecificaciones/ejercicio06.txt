@@ -3,16 +3,22 @@
 3.      variable, i[0-n]
 4.      variable2, i[0-n]
 4.      variable3, i[0-n]
-6.      variable <-- 10 
-7.      variable2 <-- 20 
+	<< "Escriba una varialbe"
+6.      >> variable
+	<< "Escriba una varialbe"
+7.      >> variable2 
 8.      variable3 <-- obtenerSumaDos(variable, variable2) // (10, 20) // 32 
 9.      obtenerSuma(variable, variable3) // (10, 32)
 10.  fin funcion principal 
 11. // se define un método o función
+ 	// Si la suma esta entre 20 y 30 se presenta un mensaje "suma dentro de rango", caso contrario "fuera de rango" 
 12.  funcion obtenerSuma(a, i; b, i) 
 13.     p, i[0-n]
 14.     p <-- a + b
-15.     Escribir "La suma es :" + p // La suma es : 42
+15.     Si (p >= 20 && p <= 30 ) entonces
+	   Escribir "Suma dentro de rango"
+	Caso contrario
+	   Escribir "Suma fuera de rango"
 16.  fin funcion obtenerSuma
 17.
 18.  funcion obtenerSumaDos(a, i; b, i) : i 
